@@ -98,7 +98,7 @@ const App = props => {
   return (
     <Provider store={store}>
       <CacheProvider value={emotionCache}>
-        <Head>
+        {/* <Head>
           <title>{`${themeConfig.templateName} - Material Design React Admin Template`}</title>
           <meta
             name='description'
@@ -106,9 +106,10 @@ const App = props => {
           />
           <meta name='keywords' content='Material Design, MUI, Admin Template, React Admin Template' />
           <meta name='viewport' content='initial-scale=1, width=device-width' />
-        </Head>
+        </Head> */}
 
-        <AuthProvider>
+              {getLayout(<Component {...pageProps} />)}
+        {/* <AuthProvider>
           <SettingsProvider {...(setConfig ? { pageSettings: setConfig() } : {})}>
             <SettingsConsumer>
               {({ settings }) => {
@@ -116,7 +117,6 @@ const App = props => {
                   <ThemeComponent settings={settings}>
                     <Guard authGuard={authGuard} guestGuard={guestGuard}>
                       <AclGuard aclAbilities={aclAbilities} guestGuard={guestGuard} authGuard={authGuard}>
-                        {getLayout(<Component {...pageProps} />)}
                       </AclGuard>
                     </Guard>
                     <ReactHotToast>
@@ -127,7 +127,7 @@ const App = props => {
               }}
             </SettingsConsumer>
           </SettingsProvider>
-        </AuthProvider>
+        </AuthProvider> */}
       </CacheProvider>
     </Provider>
   )
